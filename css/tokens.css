@@ -1,0 +1,107 @@
+/* ==========================================================
+   Mica Vita — Design tokens
+   ========================================================== */
+
+/* Fuentes de marca (colocar los .woff2 en /fonts).
+   Si no están, el sitio usa Pacifico y Outfit (incluidas en /fonts),
+   las alternativas que indica el manual de marca. */
+@font-face {
+  font-family: "Bukhari Script";
+  src: url("../fonts/BukhariScript.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Utendo";
+  src: url("../fonts/Utendo-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Utendo";
+  src: url("../fonts/Utendo-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Utendo";
+  src: url("../fonts/Utendo-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* Alternativas abiertas (OFL) incluidas en /fonts */
+@font-face { font-family: "Pacifico"; src: url("../fonts/Pacifico-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/Outfit-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/Outfit-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/Outfit-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("../fonts/Outfit-800.woff2") format("woff2"); font-weight: 800; font-display: swap; }
+
+:root {
+  /* Primario */
+  --color-primary: #7A1C27;
+  --color-primary-dark: #4C0E17;
+  --color-primary-light: #A2434C;
+
+  /* Secundario */
+  --color-beige: #EFE3CE;
+  --color-tan: #D2B48C;
+
+  /* Neutros */
+  --color-black: #16100E; /* Negro Espresso (manual de marca) */
+  --color-text: #5A4642;
+  --color-bg: #F8F2E7;
+  --color-white: #FFFDF9;
+
+  /* Promociones */
+  --color-promo: #EFE3CE;
+
+  /* Estados */
+  --color-success: #2E6B3F;
+  --color-error: #B3261E;
+
+  /* Tipografía */
+  --font-script: "Bukhari Script", "Pacifico", "Brush Script MT", cursive;
+  --font-sans: "Utendo", "Outfit", "Helvetica Neue", Arial, sans-serif;
+
+  --fs-h1: 72px;
+  --fs-h2: 48px;
+  --fs-h3: 28px;
+  --fs-body: 17px;
+  --fs-btn: 15px;
+  --fs-small: 14px;
+  --fs-xs: 12px;
+
+  /* Espaciado */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+
+  /* Radios */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-pill: 999px;
+
+  /* Sombras retro */
+  --shadow-retro: 3px 3px 0 var(--color-primary);
+  --shadow-retro-soft: 3px 3px 0 var(--color-tan);
+  --shadow-hard: 4px 4px 0 var(--color-black);
+  --tilt: -6deg; /* inclinación del logo: entre -5° y -8° */
+
+  /* Layout */
+  --container: 1200px;
+  --header-h: 72px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: 48px;
+    --fs-h2: 36px;
+    --fs-h3: 22px;
+    --fs-body: 16px;
+    --header-h: 64px;
+  }
+}

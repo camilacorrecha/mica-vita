@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menú · Mica Vita</title>
+  <meta name="description" content="Smoothies, jugos, cafés, especiales y comida saludable con opciones veganas, sin azúcar, proteicas y sin gluten.">
+  <meta name="theme-color" content="#7A1C27">
+  <link rel="icon" href="img/illustrations/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="menu">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- SECCIÓN A -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Mica Vita, inicio">Mica Vita</a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="menu.html" data-page="menu">Menú</a></li>
+          <li><a href="contacto.html" data-page="contacto">Contáctanos</a></li>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+      <button class="cart-btn" type="button" aria-label="Carrito, 0 productos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17.5" cy="20" r="1.2"/></svg>
+        <span class="cart-count" hidden>0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- Banner Nuestra comida -->
+    <section class="brand-banner brand-banner--menu" aria-labelledby="menu-title">
+      <div class="banner-label"><h1 id="menu-title">Nuestra comida</h1></div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro container" aria-labelledby="intro-title">
+      <h2 id="intro-title">Tú próximo favorito</h2>
+      <p>Elige por antojo, lo saludable ya viene incluido.</p>
+      <ul class="tag-legend" aria-label="Etiquetas del menú">
+        <li><span class="chip">VG – Vegano</span></li>
+        <li><span class="chip">SA: Sin azúcar</span></li>
+        <li><span class="chip">PRO: Proteico</span></li>
+        <li><span class="chip">SG: Sin gluten</span></li>
+      </ul>
+    </section>
+
+    <!-- Categorías -->
+    <div class="container" data-carousel="menu"></div>
+  </main>
+
+  <!-- SECCIÓN Z -->
+  <footer class="site-footer" id="ubicacion">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html" aria-label="Mica Vita, inicio">
+        <span class="logo">Mica<br>Vita</span>
+      </a>
+      <div class="footer-col">
+        <p class="footer-label">Dirección</p>
+        <p>Colina Campestre, Bogotá D.C.</p>
+        <p class="footer-label">Horario</p>
+        <p>Lunes a viernes: 2 pm a 8 pm</p>
+        <p>Sábados y domingos: 8 am a 1 pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Instagram</p>
+        <a href="https://instagram.com/micavita" target="_blank" rel="noopener">@micavita</a>
+        <p class="footer-label">WhatsApp</p>
+        <a href="https://wa.me/573174681666" target="_blank" rel="noopener">+57 317 4681666</a>
+        <a href="https://wa.me/573114394285" target="_blank" rel="noopener">+57 311 4394285</a>
+        <p class="footer-label">Correo</p>
+        <a href="mailto:micavita@gmail.com">micavita@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+</body>
+</html>

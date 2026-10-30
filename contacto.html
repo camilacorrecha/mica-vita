@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contáctanos · Mica Vita</title>
+  <meta name="description" content="Escríbenos para preguntas, catering o cualquier mensaje. Colina Campestre, Bogotá D.C.">
+  <meta name="theme-color" content="#7A1C27">
+  <link rel="icon" href="img/illustrations/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="contacto">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- SECCIÓN A -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Mica Vita, inicio">Mica Vita</a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="menu.html" data-page="menu">Menú</a></li>
+          <li><a href="contacto.html" data-page="contacto">Contáctanos</a></li>
+          <li><a href="index.html#about">About us</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+      <button class="cart-btn" type="button" aria-label="Carrito, 0 productos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17.5" cy="20" r="1.2"/></svg>
+        <span class="cart-count" hidden>0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="contact container" aria-labelledby="contact-title">
+      <div class="contact-copy">
+        <h1 id="contact-title">¡Amaríamos escucharte!</h1>
+        <p>Como cliente, usted forma parte de nuestra familia extendida. Ya sea que tenga preguntas, solicitudes de servicio de catering o simplemente quiera ponerse en contacto con nosotros, aquí estamos.</p>
+      </div>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="nombre-error">
+          <span class="field-error" id="nombre-error"></span>
+        </div>
+        <div class="field">
+          <label for="correo">Correo</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" inputmode="email" required aria-describedby="correo-error">
+          <span class="field-error" id="correo-error"></span>
+        </div>
+        <div class="field field--full">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" required aria-describedby="mensaje-error"></textarea>
+          <span class="field-error" id="mensaje-error"></span>
+        </div>
+        <div class="form-actions">
+          <p class="form-status" role="status" aria-live="polite"></p>
+          <button class="btn" type="submit">Enviar <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 5h16M13 1l4 4-4 4"/></svg></button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- SECCIÓN Z -->
+  <footer class="site-footer" id="ubicacion">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html" aria-label="Mica Vita, inicio">
+        <span class="logo">Mica<br>Vita</span>
+      </a>
+      <div class="footer-col">
+        <p class="footer-label">Dirección</p>
+        <p>Colina Campestre, Bogotá D.C.</p>
+        <p class="footer-label">Horario</p>
+        <p>Lunes a viernes: 2 pm a 8 pm</p>
+        <p>Sábados y domingos: 8 am a 1 pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Instagram</p>
+        <a href="https://instagram.com/micavita" target="_blank" rel="noopener">@micavita</a>
+        <p class="footer-label">WhatsApp</p>
+        <a href="https://wa.me/573174681666" target="_blank" rel="noopener">+57 317 4681666</a>
+        <a href="https://wa.me/573114394285" target="_blank" rel="noopener">+57 311 4394285</a>
+        <p class="footer-label">Correo</p>
+        <a href="mailto:micavita@gmail.com">micavita@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/contact-form.js"></script>
+</body>
+</html>
