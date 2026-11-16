@@ -54,6 +54,8 @@ Cada imagen busca primero una foto y, si no la encuentra, usa la ilustración `.
 
 Si agregas un producto en `data/data.js`, su imagen se busca con el nombre en minúsculas, sin tildes y con guiones.
 
+Las fotos de `about.html` se cargan desde Unsplash (licencia libre de Unsplash). Autores: Sara Cervera, Vicky Ng, Shoeib Abolhassani, Taylor Friehl, Brenda Godinez y nameless 3791. Para usar fotos propias, reemplaza las direcciones `https://images.unsplash.com/...` en `about.html` por la ruta de tu imagen.
+
 ## Pendientes
 
 - Confirmar el correo de la marca: cambiarlo en el footer de las 5 páginas (en `build.py` o en cada `.html`) y en `js/contact-form.js` (`CONTACT_EMAIL`)

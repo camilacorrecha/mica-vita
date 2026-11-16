@@ -1272,3 +1272,20 @@
 @media (max-width: 860px) {
   .ab-hero-photo img { aspect-ratio: 4 / 3.4; }
 }
+
+/* About · tarjetas de esencia con fotografía completa */
+.essence-media--photo {
+  background: var(--color-beige);
+}
+.essence-media--photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: none;
+}
+.essence-card:hover .essence-media--photo img {
+  transform: scale(1.04);
+}
+.ab-story-photo img {
+  object-position: 50% 50%;
+}
