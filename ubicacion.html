@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ubicación · Mica Vita</title>
+  <meta name="description" content="Encuentra Mica Vita dentro de Blume Estudio, en la zona de Colina, Bogotá.">
+  <meta name="theme-color" content="#7A1C27">
+  <link rel="icon" href="img/illustrations/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="ubicacion">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- SECCIÓN A -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Mica Vita, inicio">Mica Vita</a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="menu.html" data-page="menu">Menú</a></li>
+          <li><a href="contacto.html" data-page="contacto">Contáctanos</a></li>
+          <li><a href="about.html" data-page="about">About us</a></li>
+          <li><a href="ubicacion.html" data-page="ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+      <button class="cart-btn" type="button" aria-label="Carrito, 0 productos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17.5" cy="20" r="1.2"/></svg>
+        <span class="cart-count" hidden>0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- SECCIÓN A · Hero -->
+    <section class="lo-hero container" aria-labelledby="lo-hero-title">
+      <div class="lo-hero-copy">
+        <p class="eyebrow">Ubicación</p>
+        <h1 class="lo-hero-title" id="lo-hero-title">Encuéntranos.</h1>
+        <p class="ab-lead">Tu próxima pausa está más cerca de lo que imaginas.</p>
+        <p class="lo-hero-note">Estamos ubicados en Blume Estudio, en la zona de Colina, Bogotá. Un espacio donde puedes encontrar nuestra cafetería y disfrutar de algo rico.</p>
+      </div>
+      <figure class="lo-hero-photo">
+        <img src="img/home/hero.webp" alt="Mesa de Mica Vita con smoothie, bowls de açaí y café latte" width="1600" height="850" fetchpriority="high">
+      </figure>
+    </section>
+
+    <!-- SECCIÓN B · Nuestra ubicación -->
+    <section class="section container lo-visit" aria-labelledby="lo-visit-title">
+      <h2 class="lo-visit-title" id="lo-visit-title">Visítanos</h2>
+      <div class="visit-card">
+        <span class="visit-pin"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span>
+        <div>
+          <p class="visit-name">Blume Estudio</p>
+          <p class="visit-place">Zona de Colina, Bogotá, Colombia.</p>
+          <p class="visit-text">Nos encuentras dentro de Blume Estudio. Al ingresar al establecimiento podrás descubrir nuestro espacio de cafetería.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN C · Mapa y cómo llegar -->
+    <section class="section container lo-map" aria-labelledby="lo-map-title">
+      <h2 class="mix-title" id="lo-map-title"><span class="mix-sans">¿Cómo</span> <span class="mix-script">llegar?</span></h2>
+      <!-- Cuando la dirección esté confirmada, reemplazar el contenido de .map-frame
+           por el iframe de Google Maps (width="100%" height="100%" style="border:0" loading="lazy"). -->
+      <div class="map-frame" role="img" aria-label="Espacio reservado para el mapa de ubicación">
+        <div class="map-empty">
+          <span class="visit-pin"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span>
+          <p>Mapa disponible próximamente</p>
+        </div>
+      </div>
+      <p class="map-hint">Visítanos dentro de Blume Estudio, en la zona de Colina.</p>
+    </section>
+
+    <!-- SECCIÓN D · Te esperamos -->
+    <section class="brand-banner brand-banner--menu cta-banner" aria-labelledby="lo-cta-title">
+      <div class="cta-inner">
+        <h2 class="cta-title" id="lo-cta-title">¡Te esperamos!</h2>
+        <p class="cta-text">Ven por tu bebida favorita y disfruta el momento.</p>
+        <a class="btn btn--light" href="menu.html">Explorar la carta <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 5h16M13 1l4 4-4 4"/></svg></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECCIÓN Z -->
+  <footer class="site-footer" id="ubicacion">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html" aria-label="Mica Vita, inicio">
+        <span class="logo">Mica<br>Vita</span>
+      </a>
+      <div class="footer-col">
+        <p class="footer-label">Dirección</p>
+        <p>Colina Campestre, Bogotá D.C.</p>
+        <p class="footer-label">Horario</p>
+        <p>Lunes a viernes: 2 pm a 8 pm</p>
+        <p>Sábados y domingos: 8 am a 1 pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Instagram</p>
+        <a href="https://instagram.com/micavita" target="_blank" rel="noopener">@micavita</a>
+        <p class="footer-label">WhatsApp</p>
+        <a href="https://wa.me/573174681666" target="_blank" rel="noopener">+57 317 4681666</a>
+        <a href="https://wa.me/573114394285" target="_blank" rel="noopener">+57 311 4394285</a>
+        <p class="footer-label">Correo</p>
+        <a href="mailto:micavita@gmail.com">micavita@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

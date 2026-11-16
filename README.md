@@ -7,6 +7,8 @@ Sitio web de **Mica Vita**, cafetería saludable en Colina Campestre, Bogotá. *
 - `index.html`: Inicio (portada, Hecho para disfrutar, Best Sellers, Merch)
 - `menu.html`: Menú (smoothies, jugos, cafés, especiales y comida)
 - `contacto.html`: Contáctanos
+- `about.html`: About us (historia, esencia de la marca)
+- `ubicacion.html`: Ubicación (Blume Estudio, zona de Colina)
 
 ## Cómo verlo
 

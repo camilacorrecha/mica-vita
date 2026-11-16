@@ -848,3 +848,405 @@
 .hero-frame:has(.is-photo) .hero-sticker {
   display: none;
 }
+
+/* ==========================================================
+   Páginas About us y Ubicación
+   (reutilizan tokens, botones, banners y footer del sitio)
+   ========================================================== */
+
+/* ---------- Títulos mixtos: sans en mayúsculas + palabra en script ---------- */
+.eyebrow {
+  margin-bottom: var(--space-3);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+}
+.mix-title {
+  font-family: var(--font-sans);
+  font-size: inherit;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.mix-title .mix-sans {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(26px, 3vw, 40px);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--color-black);
+}
+.mix-title .mix-script {
+  display: inline-block;
+  font-family: var(--font-script);
+  font-weight: 400;
+  font-size: clamp(44px, 5vw, 68px);
+  line-height: 1.25;
+  color: var(--color-primary);
+  text-shadow: 3px 3px 0 var(--color-tan);
+  transform: rotate(-3deg);
+}
+.mix-title--center {
+  text-align: center;
+}
+.ab-lead {
+  max-width: 46ch;
+  font-size: clamp(18px, 1.6vw, 21px);
+  line-height: 1.6;
+}
+
+/* ---------- About · Sección A: hero ---------- */
+.ab-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--space-5);
+  align-items: center;
+  padding-block: var(--space-6) var(--space-5);
+}
+.ab-hero .mix-title {
+  margin-bottom: var(--space-4);
+}
+.ab-hero .mix-title .mix-sans {
+  font-size: clamp(30px, 3.6vw, 50px);
+}
+.ab-hero .mix-title .mix-script {
+  font-size: clamp(56px, 6.5vw, 92px);
+}
+.ab-hero-art {
+  position: relative;
+  aspect-ratio: 1 / 0.95;
+  border-radius: var(--radius-md);
+  background: var(--color-tan);
+  box-shadow: var(--shadow-retro);
+  overflow: hidden;
+  isolation: isolate;
+}
+.ab-hero-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("../img/illustrations/patron-comida.webp") repeat center / 520px auto;
+  opacity: 0.25;
+}
+.ab-hero-art img {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(6px 10px 14px rgba(76, 14, 23, 0.22));
+}
+.ab-hero-main {
+  left: 50%;
+  bottom: 4%;
+  width: 52%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.ab-hero-side {
+  width: 34%;
+  bottom: 8%;
+}
+.ab-hero-side--a {
+  left: 4%;
+  transform: rotate(-6deg);
+}
+.ab-hero-side--b {
+  right: 3%;
+  transform: rotate(6deg);
+}
+
+/* ---------- About · Sección B: historia ---------- */
+.ab-story {
+  background: var(--color-beige);
+  padding-block: var(--space-6);
+}
+.ab-story-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+}
+.ab-story-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-retro);
+  transform: rotate(-1.5deg);
+}
+.ab-story-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+.ab-story-copy .mix-title {
+  margin-bottom: var(--space-4);
+}
+.ab-story-copy p {
+  max-width: 52ch;
+}
+.ab-story-copy p + p {
+  margin-top: var(--space-3);
+}
+
+/* ---------- About · Sección C: esencia ---------- */
+.ab-essence {
+  padding-block: var(--space-6);
+}
+.ab-essence .mix-title {
+  margin-bottom: var(--space-5);
+}
+.essence-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.essence-card {
+  position: relative;
+}
+.essence-media {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1.15;
+  margin-bottom: var(--space-3);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: 2px 3px 0 var(--color-primary);
+  overflow: hidden;
+}
+.essence-media--beige { background: var(--color-beige); }
+.essence-media--tan { background: var(--color-tan); }
+.essence-media img {
+  width: 78%;
+  height: 86%;
+  object-fit: contain;
+  filter: drop-shadow(4px 8px 10px rgba(76, 14, 23, 0.18));
+  transition: transform 0.35s ease;
+}
+.essence-card:hover .essence-media img {
+  transform: scale(1.04) rotate(-2deg);
+}
+.essence-num {
+  font-family: var(--font-script);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--color-primary-light);
+}
+.essence-card h3 {
+  margin: 6px 0 6px;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+}
+.essence-card p {
+  font-size: var(--fs-small);
+  line-height: 1.55;
+}
+
+/* ---------- Banners de cierre (About y Ubicación) ---------- */
+.cta-banner {
+  padding-block: 110px;
+}
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.cta-title {
+  font-family: var(--font-script);
+  font-size: clamp(44px, 6vw, 76px);
+  line-height: 1.15;
+  margin-bottom: var(--space-2);
+  color: var(--color-beige);
+  text-shadow: 4px 4px 0 var(--color-black);
+  transform: rotate(-4deg);
+}
+.cta-text {
+  max-width: 40ch;
+  margin-bottom: var(--space-2);
+  font-size: clamp(17px, 1.6vw, 20px);
+  color: var(--color-beige);
+}
+.btn--light {
+  background: var(--color-beige);
+  color: var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-black);
+}
+.btn--light:hover {
+  background: var(--color-white);
+}
+
+/* ---------- Ubicación · Sección A: hero ---------- */
+.lo-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: var(--space-6);
+  align-items: center;
+  padding-block: var(--space-6) var(--space-5);
+}
+.lo-hero-title {
+  margin-bottom: var(--space-3);
+  font-size: clamp(56px, 6vw, 88px);
+  line-height: 1.15;
+  text-shadow: 4px 4px 0 var(--color-tan);
+  transform: rotate(-4deg);
+  transform-origin: left;
+}
+.lo-hero-copy .ab-lead {
+  margin-bottom: var(--space-3);
+  font-weight: 600;
+  color: var(--color-black);
+}
+.lo-hero-note {
+  max-width: 46ch;
+}
+.lo-hero-photo {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-retro);
+}
+.lo-hero-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  object-position: 55% 100%;
+}
+
+/* ---------- Ubicación · Sección B: tarjeta ---------- */
+.lo-visit {
+  display: grid;
+  justify-items: center;
+  padding-block: var(--space-5);
+}
+.lo-visit-title {
+  margin-bottom: var(--space-4);
+  text-shadow: 3px 3px 0 var(--color-tan);
+}
+.visit-card {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  width: min(100%, 760px);
+  padding: var(--space-5);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  background: var(--color-beige);
+  box-shadow: 6px 6px 0 var(--color-primary);
+}
+.visit-pin {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-beige);
+  box-shadow: 3px 3px 0 var(--color-black);
+}
+.visit-name {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: clamp(26px, 3vw, 36px);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.visit-place {
+  margin: 6px 0 var(--space-3);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* ---------- Ubicación · Sección C: mapa ---------- */
+.lo-map {
+  padding-block: var(--space-5) var(--space-6);
+}
+.lo-map .mix-title {
+  margin-bottom: var(--space-4);
+}
+.map-frame {
+  position: relative;
+  aspect-ratio: 16 / 7;
+  overflow: hidden;
+  border: 2px dashed var(--color-primary-light);
+  border-radius: var(--radius-md);
+  background: var(--color-beige);
+  isolation: isolate;
+}
+.map-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(122, 28, 39, 0.07) 1px, transparent 1px) 0 0 / 48px 48px,
+    linear-gradient(90deg, rgba(122, 28, 39, 0.07) 1px, transparent 1px) 0 0 / 48px 48px;
+}
+.map-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.map-empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+.map-empty p {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+.map-hint {
+  margin-top: var(--space-4);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-black);
+}
+
+/* ---------- Responsive de las páginas nuevas ---------- */
+@media (max-width: 1023px) {
+  .essence-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .ab-hero,
+  .lo-hero,
+  .ab-story-inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .ab-hero,
+  .lo-hero {
+    padding-top: var(--space-5);
+  }
+  .ab-story-photo { transform: none; }
+  .map-frame { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 560px) {
+  .essence-grid { gap: var(--space-4) var(--space-3); }
+  .visit-card {
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+  .cta-banner { padding-block: 84px; }
+}
