@@ -1289,3 +1289,8 @@
 .ab-story-photo img {
   object-position: 50% 50%;
 }
+
+/* Ubicación · foto del espacio (Unsplash) */
+.lo-hero-photo img {
+  object-position: 40% 60%;
+}
