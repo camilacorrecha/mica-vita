@@ -1777,3 +1777,110 @@
 @media (max-width: 560px) {
   .toast.has-action { width: calc(100vw - 32px); justify-content: space-between; }
 }
+
+/* ==========================================================
+   Armonía visual: alturas iguales, textos legibles y
+   carriles alineados con las tarjetas (según el Figma)
+   ========================================================== */
+
+/* Best Sellers: cajas de texto de la misma altura */
+.bs-grid > li {
+  display: flex;
+  flex-direction: column;
+}
+.bs-info {
+  flex: 1;
+  padding: 18px 20px 20px;
+}
+.bs-info h3 {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.bs-info p {
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* Tarjetas de producto */
+.carousel-track > li {
+  display: flex;
+  flex-direction: column;
+}
+.card-media {
+  aspect-ratio: 1 / 1;
+}
+.card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  margin-top: 14px;
+  padding: 16px 18px 24px;
+}
+.card-name {
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.3;
+}
+.card-desc {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.card-price {
+  margin-top: auto;
+  font-size: 15px;
+}
+.add-btn {
+  right: 14px;
+  bottom: -18px;
+  width: 38px;
+  height: 38px;
+  font-size: 21px;
+  box-shadow: 2px 2px 0 var(--color-primary);
+}
+.media.is-photo > img,
+.card-media > img {
+  padding: 7%;
+}
+
+/* El carril de la categoría mide lo mismo que las tarjetas */
+.carousel {
+  align-items: start;
+}
+.carousel > .arrow {
+  align-self: center;
+  margin-bottom: 22px;
+}
+.rail {
+  min-height: 0;
+  margin: 4px 0 22px;
+}
+/* Sin flechas cuando todo cabe en pantalla */
+.carousel.is-static > .arrow {
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .rail { margin: 0; }
+  /* Best Sellers en fila deslizable en el celular */
+  .bs-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 78%;
+    gap: 14px;
+    margin-inline: -16px;
+    padding: 4px 16px 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
+    scrollbar-width: none;
+  }
+  .bs-grid::-webkit-scrollbar { display: none; }
+  .bs-grid > li { scroll-snap-align: start; }
+  .bs-name { font-size: 40px; }
+}
+@media (max-width: 560px) {
+  .banner-label { padding: 4px 24px 10px; box-shadow: 6px 6px 0 var(--color-black); }
+  .banner-label h1 { font-size: 38px; white-space: nowrap; }
+}

@@ -70,6 +70,7 @@
       const max = track.scrollWidth - track.clientWidth - 2;
       prev.disabled = track.scrollLeft <= 2;
       next.disabled = track.scrollLeft >= max;
+      el.classList.toggle("is-static", max <= 0);
     };
 
     prev.addEventListener("click", () => go(-1));
