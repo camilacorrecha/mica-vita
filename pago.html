@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pago · Mica Vita</title>
+  <meta name="description" content="Finaliza tu pedido en Mica Vita: revisa tus productos, elige cómo pagar y recoge en Blume Estudio.">
+  <meta name="theme-color" content="#7A1C27">
+  <link rel="icon" href="img/illustrations/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Pacifico-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body data-page="pago">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- SECCIÓN A -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Mica Vita, inicio">Mica Vita</a>
+      <nav id="site-nav" class="site-nav" aria-label="Principal">
+        <ul>
+          <li><a href="menu.html" data-page="menu">Menú</a></li>
+          <li><a href="contacto.html" data-page="contacto">Contáctanos</a></li>
+          <li><a href="about.html" data-page="about">About us</a></li>
+          <li><a href="ubicacion.html" data-page="ubicacion">Ubicación</a></li>
+        </ul>
+      </nav>
+      <button class="cart-btn" type="button" aria-label="Carrito, 0 productos">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2"/><circle cx="9.5" cy="20" r="1.2"/><circle cx="17.5" cy="20" r="1.2"/></svg>
+        <span class="cart-count" hidden>0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- SECCIÓN A · Encabezado de la página -->
+    <section class="container checkout-head" aria-labelledby="checkout-title">
+      <p class="eyebrow">Pago</p>
+      <h1 class="mix-title" id="checkout-title"><span class="mix-sans">Finaliza tu</span> <span class="mix-script">pedido</span></h1>
+      <ol class="steps" aria-label="Pasos">
+        <li class="is-done">Carrito</li>
+        <li class="is-current" aria-current="step">Datos y pago</li>
+        <li>Confirmación</li>
+      </ol>
+    </section>
+
+    <!-- SECCIÓN B · Datos, pago y resumen -->
+    <div class="container checkout-layout">
+      <form class="checkout-form" id="checkout-form" novalidate>
+        <fieldset class="checkout-box">
+          <legend class="checkout-legend"><span>1</span> Tus datos</legend>
+          <div class="form">
+            <div class="field field--full">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required aria-describedby="nombre-error">
+              <span class="field-error" id="nombre-error"></span>
+            </div>
+            <div class="field">
+              <label for="celular">Celular</label>
+              <input id="celular" name="celular" type="tel" autocomplete="tel" inputmode="tel" placeholder="300 000 0000" required aria-describedby="celular-error">
+              <span class="field-error" id="celular-error"></span>
+            </div>
+            <div class="field">
+              <label for="correo">Correo <span class="optional">(opcional)</span></label>
+              <input id="correo" name="correo" type="email" autocomplete="email" inputmode="email" aria-describedby="correo-error">
+              <span class="field-error" id="correo-error"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-box">
+          <legend class="checkout-legend"><span>2</span> Entrega</legend>
+          <div class="pickup">
+            <span class="visit-pin visit-pin--sm"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.6"/></svg></span>
+            <div>
+              <p class="pickup-title">Recoger en el local</p>
+              <p class="pickup-text">Blume Estudio, zona de Colina, Bogotá.</p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="checkout-box">
+          <legend class="checkout-legend"><span>3</span> Método de pago</legend>
+          <div class="pay-options">
+            <label class="pay-option">
+              <input type="radio" name="pago" value="Efectivo al recoger" checked>
+              <span class="pay-card">
+                <span class="pay-name">Efectivo</span>
+                <span class="pay-desc">Pagas cuando recoges tu pedido.</span>
+              </span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="pago" value="Tarjeta débito o crédito al recoger">
+              <span class="pay-card">
+                <span class="pay-name">Tarjeta débito o crédito</span>
+                <span class="pay-desc">Pagas con datáfono cuando recoges tu pedido.</span>
+              </span>
+            </label>
+          </div>
+          <div class="field field--full checkout-notes">
+            <label for="notas">Notas para tu pedido <span class="optional">(opcional)</span></label>
+            <textarea id="notas" name="notas" rows="3" placeholder="Por ejemplo: leche de almendras, sin hielo…"></textarea>
+          </div>
+        </fieldset>
+
+        <button class="btn checkout-submit" type="submit">Confirmar pedido <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 5h16M13 1l4 4-4 4"/></svg></button>
+      </form>
+
+      <aside class="order-box" aria-labelledby="order-title">
+        <h2 class="order-title" id="order-title">Tu pedido</h2>
+        <div id="order-summary"></div>
+      </aside>
+    </div>
+
+    <!-- SECCIÓN C · Confirmación -->
+    <section class="container checkout-done" id="checkout-done" hidden aria-labelledby="done-title">
+      <div class="done-card">
+        <span class="done-check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+        <h2 class="done-title" id="done-title" tabindex="-1">¡Gracias, <span class="done-name"></span>!</h2>
+        <p class="done-lead">Tu pedido <strong class="done-code"></strong> está listo para enviar.</p>
+        <ul class="done-list"></ul>
+        <div class="cart-sum cart-sum--total"><span>Total</span><strong class="done-total"></strong></div>
+        <p class="done-meta">Pago: <span class="done-pay"></span> · Recoges en Blume Estudio, zona de Colina.</p>
+        <p class="done-help">Envíanos el pedido por WhatsApp para que empecemos a prepararlo.</p>
+        <div class="done-actions">
+          <a class="btn done-whatsapp" href="#" target="_blank" rel="noopener">Enviar pedido por WhatsApp <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 5h16M13 1l4 4-4 4"/></svg></a>
+          <a class="done-back" href="menu.html">Volver a la carta</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECCIÓN Z -->
+  <footer class="site-footer" id="ubicacion">
+    <div class="container footer-inner">
+      <a class="footer-brand" href="index.html" aria-label="Mica Vita, inicio">
+        <span class="logo">Mica<br>Vita</span>
+      </a>
+      <div class="footer-col">
+        <p class="footer-label">Dirección</p>
+        <p>Colina Campestre, Bogotá D.C.</p>
+        <p class="footer-label">Horario</p>
+        <p>Lunes a viernes: 2 pm a 8 pm</p>
+        <p>Sábados y domingos: 8 am a 1 pm</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Instagram</p>
+        <a href="https://instagram.com/micavita" target="_blank" rel="noopener">@micavita</a>
+        <p class="footer-label">WhatsApp</p>
+        <a href="https://wa.me/573174681666" target="_blank" rel="noopener">+57 317 4681666</a>
+        <a href="https://wa.me/573114394285" target="_blank" rel="noopener">+57 311 4394285</a>
+        <p class="footer-label">Correo</p>
+        <a href="mailto:micavita@gmail.com">micavita@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

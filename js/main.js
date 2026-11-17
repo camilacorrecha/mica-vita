@@ -57,79 +57,30 @@
   }
   handleImages(document);
 
-  /* ---------- Aviso (toast) ---------- */
+  /* ---------- Aviso (toast) con acción opcional ---------- */
   const toastEl = document.createElement("div");
   toastEl.className = "toast";
   toastEl.setAttribute("role", "status");
   toastEl.setAttribute("aria-live", "polite");
   document.body.appendChild(toastEl);
   let toastTimer;
-  function toast(message) {
+  function toast(message, action) {
     toastEl.textContent = message;
+    toastEl.classList.toggle("has-action", Boolean(action));
+    if (action) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "toast-action";
+      btn.textContent = action.label;
+      btn.addEventListener("click", () => {
+        toastEl.classList.remove("is-visible");
+        action.onClick();
+      });
+      toastEl.appendChild(btn);
+    }
     toastEl.classList.add("is-visible");
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => toastEl.classList.remove("is-visible"), 2600);
-  }
-
-  /* ---------- Carrito (solo conteo local) ---------- */
-  const STORAGE_KEY = "micavita-cart";
-  const read = () => {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
-    } catch (e) {
-      return memoryCart;
-    }
-  };
-  const write = (cart) => {
-    memoryCart = cart;
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
-    } catch (e) {
-      /* sin almacenamiento: se queda en memoria */
-    }
-  };
-  let memoryCart = {};
-
-  const cartBtn = document.querySelector(".cart-btn");
-  const cartCount = document.querySelector(".cart-count");
-  const total = (cart) => Object.values(cart).reduce((a, b) => a + b, 0);
-
-  function renderCart() {
-    const n = total(read());
-    if (cartCount) {
-      cartCount.textContent = n;
-      cartCount.hidden = n === 0;
-    }
-    if (cartBtn) cartBtn.setAttribute("aria-label", `Carrito, ${n} ${n === 1 ? "producto" : "productos"}`);
-  }
-  renderCart();
-
-  document.addEventListener("click", (e) => {
-    const btn = e.target.closest("[data-add]");
-    if (!btn) return;
-    const name = btn.dataset.add;
-    const cart = read();
-    cart[name] = (cart[name] || 0) + 1;
-    write(cart);
-    renderCart();
-    if (cartBtn) {
-      cartBtn.classList.remove("is-bumped");
-      void cartBtn.offsetWidth;
-      cartBtn.classList.add("is-bumped");
-    }
-    toast(`${name} agregado al carrito`);
-  });
-
-  if (cartBtn) {
-    cartBtn.addEventListener("click", () => {
-      const cart = read();
-      const entries = Object.entries(cart);
-      if (!entries.length) {
-        toast("Tu carrito está vacío");
-        return;
-      }
-      toast("Tu carrito: " + entries.map(([k, v]) => `${v} × ${k}`).join(", "));
-    });
+    toastTimer = setTimeout(() => toastEl.classList.remove("is-visible"), action ? 4200 : 2600);
   }
 
   window.Mica = { handleImages, toast };
