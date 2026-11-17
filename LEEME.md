@@ -61,7 +61,7 @@ Cada imagen busca primero una foto y, si no la encuentra, usa la ilustración `.
 
 Si agregas un producto en `data/data.js`, su imagen se busca con el nombre en minúsculas, sin tildes y con guiones.
 
-Las fotos de `about.html` están en `img/about/` (`hero`, `cafe`, `limon`, `frutas`, `matcha`, `merch`), en el mismo orden del prototipo de Figma. La foto principal de `ubicacion.html` se carga desde Unsplash (licencia libre de Unsplash, autor: Kris Atomic); para usar una propia, reemplaza la dirección `https://images.unsplash.com/...` por la ruta de tu imagen.
+Las fotos de `about.html` están en `img/about/` (`hero`, `cafe`, `limon`, `frutas`, `matcha`, `merch`), en el mismo orden del prototipo de Figma. La foto principal de `ubicacion.html` es `img/ubicacion/bogota.webp`.
 
 ## Pendientes
 
