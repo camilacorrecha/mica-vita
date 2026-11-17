@@ -1839,8 +1839,8 @@
   font-size: 21px;
   box-shadow: 2px 2px 0 var(--color-primary);
 }
-.media.is-photo > img,
-.card-media > img {
+.card-media > img,
+.card-media.is-photo > img {
   padding: 7%;
 }
 
