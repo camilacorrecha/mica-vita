@@ -51,13 +51,17 @@ Cada imagen busca primero una foto y, si no la encuentra, usa la ilustración `.
 - `matcha`, `batido-proteico`, `mocha`
 - `wafle`, `sandwich-de-pavo`, `avocado-toast`
 
+`img/about/`
+
+- `hero`, `cafe`, `limon`, `frutas`, `matcha`, `merch`
+
 `img/merch/`
 
 - `samba-1-1`, `new-balance-1-1`, `medias-antideslizantes`
 
 Si agregas un producto en `data/data.js`, su imagen se busca con el nombre en minúsculas, sin tildes y con guiones.
 
-Las fotos de `about.html` y la foto principal de `ubicacion.html` se cargan desde Unsplash (licencia libre de Unsplash). Autores: Sara Cervera, Vicky Ng, Shoeib Abolhassani, Taylor Friehl, Brenda Godinez, nameless 3791 y Kris Atomic. Para usar fotos propias, reemplaza las direcciones `https://images.unsplash.com/...` por la ruta de tu imagen.
+Las fotos de `about.html` están en `img/about/` (`hero`, `cafe`, `limon`, `frutas`, `matcha`, `merch`), en el mismo orden del prototipo de Figma. La foto principal de `ubicacion.html` se carga desde Unsplash (licencia libre de Unsplash, autor: Kris Atomic); para usar una propia, reemplaza la dirección `https://images.unsplash.com/...` por la ruta de tu imagen.
 
 ## Pendientes
 
